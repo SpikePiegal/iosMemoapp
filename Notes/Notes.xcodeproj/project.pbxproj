@@ -13,6 +13,7 @@
 		FF25D2C7227370FF00915DD8 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF25D2C5227370FF00915DD8 /* Notes.xcdatamodeld */; };
 		FF25D2C9227370FF00915DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF25D2C8227370FF00915DD8 /* Assets.xcassets */; };
 		FF25D2CC227370FF00915DD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF25D2CA227370FF00915DD8 /* LaunchScreen.storyboard */; };
+		FF25D2D42278A1DE00915DD8 /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25D2D32278A1DD00915DD8 /* NoteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FF25D2C8227370FF00915DD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF25D2CB227370FF00915DD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF25D2CD227370FF00915DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF25D2D32278A1DD00915DD8 /* NoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FF25D2CA227370FF00915DD8 /* LaunchScreen.storyboard */,
 				FF25D2CD227370FF00915DD8 /* Info.plist */,
 				FF25D2C5227370FF00915DD8 /* Notes.xcdatamodeld */,
+				FF25D2D32278A1DD00915DD8 /* NoteTableViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF25D2C1227370FF00915DD8 /* ViewController.swift in Sources */,
+				FF25D2D42278A1DE00915DD8 /* NoteTableViewController.swift in Sources */,
 				FF25D2C7227370FF00915DD8 /* Notes.xcdatamodeld in Sources */,
 				FF25D2BF227370FF00915DD8 /* AppDelegate.swift in Sources */,
 			);
