@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesTableViewCell" rowHeight="124" id="N33-zz-wCt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteTableViewCell" rowHeight="124" id="N33-zz-wCt" customClass="noteTableViewCell" customModule="Notes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N33-zz-wCt" id="1cG-qB-csV">
@@ -28,13 +28,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMF-D5-0J7">
-                                            <rect key="frame" x="8" y="-13" width="359" height="145.5"/>
+                                            <rect key="frame" x="8" y="-13" width="359" height="140.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSz-Ob-dJ5">
-                                                    <rect key="frame" x="0.0" y="28" width="92" height="89.5"/>
+                                                    <rect key="frame" x="0.0" y="28.5" width="92" height="84"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlH-5U-651">
-                                                    <rect key="frame" x="100" y="28" width="250" height="26.5"/>
+                                                    <rect key="frame" x="100" y="28.5" width="250" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="5Br-ZS-a3z"/>
                                                     </constraints>
@@ -43,7 +43,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipZ-bo-on6">
-                                                    <rect key="frame" x="100" y="62.5" width="259" height="55"/>
+                                                    <rect key="frame" x="100" y="57.5" width="259" height="55"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="259" id="730-5Z-GbK"/>
                                                         <constraint firstAttribute="width" secondItem="ipZ-bo-on6" secondAttribute="height" multiplier="259:55" id="DoJ-zP-qD3"/>
@@ -78,6 +78,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="descriptionLabel" destination="ipZ-bo-on6" id="te5-Tl-3z8"/>
+                                    <outlet property="noteDescriptionLabel" destination="ipZ-bo-on6" id="0BN-qu-5vh"/>
+                                    <outlet property="noteImageView" destination="hSz-Ob-dJ5" id="dMG-Ui-9u3"/>
+                                    <outlet property="noteNameLabel" destination="YlH-5U-651" id="E5d-fk-uvR"/>
+                                    <outlet property="shadowView" destination="JMF-D5-0J7" id="xOJ-V9-849"/>
                                     <segue destination="kFh-4u-vbV" kind="show" identifier="showNote" id="vaC-5X-k5L"/>
                                 </connections>
                             </tableViewCell>
