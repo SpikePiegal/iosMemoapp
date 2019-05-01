@@ -13,7 +13,7 @@ class noteTableViewCell: UITableViewCell {
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var noteNameLabel: UILabel!
     @IBOutlet weak var noteDescriptionLabel: UILabel!
-    @IBOutlet weak var noteImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,6 @@ class noteTableViewCell: UITableViewCell {
         shadowView.layer.shadowOpacity = 0.2
         shadowView.layer.cornerRadius = 2
         
-        noteImageView.layer.cornerRadius = 2
 
     }
 
@@ -35,7 +34,7 @@ class noteTableViewCell: UITableViewCell {
     
     func configureCell(note: Note) {
         
-        self.noteNameLabel.text = note.notename?.uppercased()
+        self.noteNameLabel.text = note.notename
         self.noteDescriptionLabel.text = note.noteDescription
         
         

@@ -17,19 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-       UINavigationBar.appearance().barTintColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-      UINavigationBar.appearance().tintColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
         
-    //    let color = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        let color = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 
-        //let font = UIFont(name:)
+        let font = UIFont(name:"Verdana", size: 20)!
         
-   //      let attributes : [NSAttributedStringKey: AnyObject] = [
-   //          NSAttributedStringKey.foregroundColor: color
- // ]
+        let attributes : [String: AnyObject] = [
+            NSFontAttributeName: font,
+            NSForegroundColorAttributeName: color
+        ]
         
-    //    UINavigationBar.appearance().titleTextAttributes = attributes
-   //     UIApplication.shared.statusBarStyle = .lightContent
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        UIApplication.shared.statusBarStyle = .lightContent
         
         // Override point for customization after application launch.
         return true
@@ -106,3 +107,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let context = appDelegate.persistentContainer.viewContext
