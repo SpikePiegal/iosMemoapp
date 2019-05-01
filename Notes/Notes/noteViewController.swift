@@ -42,7 +42,7 @@ class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationCo
             noteNameLabel.text = note.noteName
             noteDescriptionLabel.text = note.noteDescription
             
-            
+            //committ
         }
         
         if noteNameLabel.text != "" {
