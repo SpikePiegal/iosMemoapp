@@ -24,6 +24,7 @@ class noteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         retrieveNotes()
+        loadDataFromDatabase()
         
     }
     
@@ -60,7 +61,9 @@ class noteTableViewController: UITableViewController {
         
         let context = appDelegate.persistentContainer.viewContext
         
-        let request = NSFetchRequest<NSManagedObject>(entityName: "Note")
+    // let request = NSFetchRequest<NSManagedObject>(entityName: "Note")
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
         
         let sortDescriptor = NSSortDescriptor(key: sortPriority, ascending: true)
         
@@ -68,18 +71,23 @@ class noteTableViewController: UITableViewController {
         
         request.sortDescriptors = sortDescriptorsArray
         
-        do {
-            
+        
+    /*    do {
             notes = try context.fetch(request)
         } catch let errer as NSError {
-            
-       //     print("Could not fetch. \(error), \(error.userInfo)")
+            print("Could not fetch. \(error), \(error.userInfo)")
         }
-        
-        
     }
-
-
+} */
+        
+        do {
+            
+            notes = try context.fetch(request) as? [Note] ?? []
+            
+        } catch let error as NSError {
+           print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableViewCell", for: indexPath) as! noteTableViewCell
