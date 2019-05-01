@@ -22,6 +22,9 @@ class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationCo
     @IBOutlet weak var noteNameLabel: UITextField!
     @IBOutlet weak var noteDescriptionLabel: UITextView!
     
+    @IBOutlet weak var pckPriority: UIPickerView!
+    
+    
     var managedObjectContext: NSManagedObjectContext? {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
@@ -38,12 +41,12 @@ class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationCo
     
     var selectedPriority: String?
     
-    func createPriorityPicker() {
+ /*   func createPriorityPicker() {
         
         let priorityPicker = UIPickerView()
         priorityPicker.delegate = self
         
-    }
+    } */
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -71,7 +74,10 @@ class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationCo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createPriorityPicker()
+        pckPriority.delegate = self
+        pckPriority.dataSource = self
+        
+       // createPriorityPicker()
         
         // Load data
         if let note = note {
