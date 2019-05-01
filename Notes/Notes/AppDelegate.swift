@@ -22,6 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        let settings = UserDefaults.standard
+        
+        if (settings.string(forKey: Constants.kPriority)) == nil {
+            settings.set("low", forKey: Constants.kPriority)
+            }
+        
+        settings.synchronize()
+        
+        NSLog("Priority: %@", settings.string(forKey: Constants.kPriority)!)
+        
+        return true
+        
+        
+        
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)

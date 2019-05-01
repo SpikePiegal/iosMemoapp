@@ -50,6 +50,35 @@ class noteTableViewController: UITableViewController {
         
         return notes.count
     }
+    
+    
+    func loadDataFromDatabase() {
+        
+        let settings = UserDefaults.standard
+        
+        let sortPriority = settings.string(forKey: Constants.kPriority)
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSManagedObject>(entityName: "Note")
+        
+        let sortDescriptor = NSSortDescriptor(key: sortPriority, ascending: true)
+        
+        let sortDescriptorsArray = [sortDescriptor]
+        
+        request.sortDescriptors = sortDescriptorsArray
+        
+        do {
+            
+            notes = try context.fetch(request)
+        } catch let errer as NSError {
+            
+       //     print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        
+    }
+
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -63,6 +63,29 @@ class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationCo
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedPriority = priority[row]
+        
+        let sortPriority = priority[row]
+        
+        let settings = UserDefaults.standard
+        
+        settings.set(sortPriority, forKey: Constants.kPriority)
+        
+        settings.synchronize()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let settings = UserDefaults.standard
+        
+        let sortPriority = settings.string(forKey: Constants.kPriority)
+        var i = 0
+        for field in priority {
+            if field == sortPriority {
+                pckPriority.selectRow(i, inComponent: 0, animated: false)
+            }
+            
+            i += 1
+        }
+            pckPriority.reloadComponent(0)
     }
     
     var notesFetchedResultsController: NSFetchedResultsController<Note>!
