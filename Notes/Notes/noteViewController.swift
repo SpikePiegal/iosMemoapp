@@ -14,7 +14,7 @@ import CoreData
 import UIKit
 import CoreData
 
-class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationControllerDelegate, UITextViewDelegate {
+class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationControllerDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var noteInfoView: UIView!
    
@@ -28,6 +28,40 @@ class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationCo
         //Commit
     }
     
+    let priority = [
+    
+        "low",
+        "Medium",
+        "High"
+        
+    ]
+    
+    var selectedPriority: String?
+    
+    func createPriorityPicker() {
+        
+        let priorityPicker = UIPickerView()
+        priorityPicker.delegate = self
+        
+    }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return priority.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return priority[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedPriority = priority[row]
+    }
+    
     var notesFetchedResultsController: NSFetchedResultsController<Note>!
     var notes = [Note]()
     var note: Note?
@@ -36,6 +70,8 @@ class noteViewController: UIViewController, UITextFieldDelegate,  UINavigationCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createPriorityPicker()
         
         // Load data
         if let note = note {
