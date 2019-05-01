@@ -154,10 +154,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Note Details" id="A7B-oG-PmX">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5lA-EY-NX7"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="utJ-1V-rQd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="utJ-1V-rQd">
+                            <connections>
+                                <action selector="saveButtonWasPressed:" destination="PTY-D7-Xmu" id="9ys-xf-mgp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THd-8P-hge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PTY-D7-Xmu" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="F3B-3c-aOP"/>
             </objects>
             <point key="canvasLocation" x="1652" y="88.605697151424295"/>
@@ -200,6 +205,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vaC-5X-k5L"/>
+        <segue reference="2rh-Ap-Ydp"/>
     </inferredMetricsTieBreakers>
 </document>

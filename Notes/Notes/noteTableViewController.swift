@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class NoteTableViewController: UITableViewController {
+class noteTableViewController: UITableViewController {
     
     var notes = [Note]()
     
@@ -23,15 +23,8 @@ class NoteTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        retrieveNotes()
         
-        
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,12 +43,12 @@ class NoteTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return notes.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return notes.count
     }
 
     
@@ -65,8 +58,6 @@ class NoteTableViewController: UITableViewController {
         // Configure the cell...
         let note: Note = notes[indexPath.row]
         cell.configureCell(note: note)
-        cell.backgroundColor = UIColor.clear
-        
         
         return cell
     }
