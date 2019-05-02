@@ -201,11 +201,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJj-1S-r1t">
-                                <rect key="frame" x="291" y="50" width="46" height="14"/>
+                                <rect key="frame" x="164" y="84" width="46" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <segue destination="d3l-TM-RjA" kind="show" id="MBy-Vb-9Iq"/>
+                                    <segue destination="AT2-0D-EU6" kind="showDetail" id="O5U-fR-iMZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCJ-6i-Lor" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3273" y="385"/>
+            <point key="canvasLocation" x="3272.8000000000002" y="384.55772113943033"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mAm-zf-dfZ">
@@ -257,7 +257,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MBy-Vb-9Iq"/>
+        <segue reference="O5U-fR-iMZ"/>
         <segue reference="vaC-5X-k5L"/>
     </inferredMetricsTieBreakers>
 </document>
