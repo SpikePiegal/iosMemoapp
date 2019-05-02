@@ -16,6 +16,7 @@
 		FF25D2D42278A1DE00915DD8 /* noteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25D2D32278A1DD00915DD8 /* noteTableViewController.swift */; };
 		FF25D2D62278B89100915DD8 /* noteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25D2D52278B89100915DD8 /* noteTableViewCell.swift */; };
 		FFD0EBF1227A3AB000FD57B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0EBF0227A3AB000FD57B5 /* Constants.swift */; };
+		FFD0EBF3227A684200FD57B5 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0EBF2227A684200FD57B5 /* settingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FF25D2D32278A1DD00915DD8 /* noteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noteTableViewController.swift; sourceTree = "<group>"; };
 		FF25D2D52278B89100915DD8 /* noteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noteTableViewCell.swift; sourceTree = "<group>"; };
 		FFD0EBF0227A3AB000FD57B5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FFD0EBF2227A684200FD57B5 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				FF25D2D52278B89100915DD8 /* noteTableViewCell.swift */,
 				D03F4986227A1B16009CD6F6 /* noteViewController.swift */,
 				FFD0EBF0227A3AB000FD57B5 /* Constants.swift */,
+				FFD0EBF2227A684200FD57B5 /* settingsViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				D03F4987227A1B16009CD6F6 /* noteViewController.swift in Sources */,
 				FF25D2BF227370FF00915DD8 /* AppDelegate.swift in Sources */,
 				FFD0EBF1227A3AB000FD57B5 /* Constants.swift in Sources */,
+				FFD0EBF3227A684200FD57B5 /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
