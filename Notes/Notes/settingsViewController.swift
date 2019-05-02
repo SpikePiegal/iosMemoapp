@@ -8,9 +8,10 @@
 
 import UIKit
 
-class settingsViewController: UIViewController {
+class settingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var pckPriority: UIPickerView!
+    
     let priority = [
         
         "low",
