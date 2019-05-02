@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N33-zz-wCt" id="1cG-qB-csV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMF-D5-0J7">
@@ -182,12 +182,12 @@
                 <exit id="PTY-D7-Xmu" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="F3B-3c-aOP"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-217"/>
+            <point key="canvasLocation" x="2086" y="865"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="8ka-B4-2kh">
             <objects>
-                <viewController id="e5c-UN-uoD" customClass="settingsViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="e5c-UN-uoD" customClass="settingsViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2dd-nh-nB1"/>
                         <viewControllerLayoutGuide type="bottom" id="nS8-RF-0cY"/>
@@ -200,17 +200,18 @@
                                 <rect key="frame" x="0.0" y="225" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJj-1S-r1t">
-                                <rect key="frame" x="164" y="84" width="46" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <segue destination="AT2-0D-EU6" kind="showDetail" id="O5U-fR-iMZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="done" systemItem="done" id="fsf-lk-cQh">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="d3l-TM-RjA" kind="showDetail" id="aUx-SW-Btm"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pckPriority" destination="p0y-jp-Mz2" id="PNC-LD-j0p"/>
                     </connections>
@@ -257,7 +258,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O5U-fR-iMZ"/>
         <segue reference="vaC-5X-k5L"/>
+        <segue reference="aUx-SW-Btm"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class settingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class settingsViewController:  UIViewController, UITextFieldDelegate,  UINavigationControllerDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate  {
     
     @IBOutlet weak var pckPriority: UIPickerView!
     
